@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Validator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Validator</h1>
+      <form>
+          <input type="password" name="password" id="password" />
+          <i class="bi bi-eye-slash" id="toggle"></i>
+      </form>
+      </div>
+      <div class="rules">
+        <h1>Password must contain</h1>
+        <p id='length' class='invalid'>be atleat 8 characters long</p>
+        <p id='letter'class='invalid'>contain a letter</p>
+        <p id='number' class='invalid'>contain a number</p>
+        <p id='symbol' class='invalid'>contain a symbol</p>
+      </div>
+
+    <script src="{{url_for('static',filename='index.js')}}"></script>
+  </body>
+</html>

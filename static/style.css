@@ -1,0 +1,32 @@
+form i {
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+body{
+text-align: center;
+padding: 15% 30%;
+}
+
+.container{
+  padding:20px 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.rules{
+  display: none;
+  text-align: left;
+}
+.valid{
+  color:green;
+}
+.valid::before{
+  content:"✔";
+  padding-right: 1px;
+}
+.invalid{
+  color:red;
+}
+.invalid::before{
+  content:"✖";
+  padding-right: 15px;
+}
