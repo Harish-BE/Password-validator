@@ -1,3 +1,8 @@
+html {
+  height:100%;
+  font-family: 'Basic', sans-serif;
+}
+
 form i {
     margin-left: -30px;
     cursor: pointer;
@@ -8,9 +13,21 @@ text-align: center;
 padding: 15% 30%;
 }
 
+.heading{
+  padding-bottom: 15px;
+}
+
 .container{
   padding:20px 30px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
 }
 .rules{
   display: none;
@@ -28,5 +45,36 @@ padding: 15% 30%;
 }
 .invalid::before{
   content:"✖";
-  padding-right: 15px;
+  padding-right: 1px;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
 }

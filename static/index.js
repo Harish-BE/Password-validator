@@ -1,10 +1,10 @@
 const togglePassword = document.querySelector('#togglePassword');
 const password = document.querySelector('#password');
 
-toggle.addEventListener('click', function (e) {
+eye.addEventListener('click', function (e) {
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);
-    classList.toggle('bi-eye');
+    eye.classList.toggle('bi-eye');
 });
 
 const psw = document.getElementById("password");
@@ -38,5 +38,23 @@ psw.onkeyup = function(){
     symbol.classList.remove('valid');
     symbol.classList.add('invalid');
   }
+
+  if(psw.value.length>=8){
+    length.classList.remove('invalid');
+    length.classList.add('valid');
+  }else{
+    length.classList.remove('valid');
+    length.classList.add('invalid');
+  }
+
+  const numbers=/[0-9]/g;
+  if(psw.value.match(numbers)){
+    number.classList.remove('invalid');
+    number.classList.add('valid');
+  }else{
+    number.classList.remove('valid');
+    number.classList.add('invalid');
+  }
+
 
 }
