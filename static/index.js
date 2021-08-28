@@ -21,7 +21,7 @@ psw.onblur = function(){
 }
 
 psw.onkeyup = function(){
-  const letters=/[a-z]/g;
+  const letters=/[a-zA-Z]/g;
   if(psw.value.match(letters)){
     letter.classList.remove('invalid');
     letter.classList.add('valid');
@@ -55,6 +55,4 @@ psw.onkeyup = function(){
     number.classList.remove('valid');
     number.classList.add('invalid');
   }
-
-
 }
